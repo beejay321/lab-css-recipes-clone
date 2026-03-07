@@ -34,14 +34,15 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
-.container {
-  margin: 72px;
+#container {
+  margin: 72px auto;
+  width: 80%;
 }
 #background-image {
   background-image: url("../images/apple-pie.jpg");
+  background-size: cover;
   height: 75vh;
   width: 100%;
-  object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,4 +76,18 @@ img {
   height: 10vh;
   display: block;
   margin: 0 auto;
+}
+ul {
+  list-style-type: "- ";
+}
+ol {
+  margin: 20px 0 0 20px;
+  list-style: none;
+  counter-reset: step;
+}
+ol li {
+  counter-increment: step;
+}
+ol li::before {
+  content: counter(step) ".)";
 }
